@@ -1,0 +1,78 @@
+					* Java Programming *
+========================================================================================================
+# (Mid-Way-K)Extra-Notes -> 
+	1. Data type -> primitive (int) and class type (Integer)
+	2. to convert primitive to class type  ans vise versa -> we use wrapper class
+		i. int a=20;	Integer i=Integer.valueOf(a);
+		ii. Integer a=new Integer(3);	int i=a.intValue();
+
+#1. To convert string to int -> int n = Integer.parseInt(string);
+
+#2. Create scanner object
+	Scanner lineScan = new Scanner(line);
+	lineScan.hasNext() -> check next token present or not if yes return true otherwise false
+
+#3. To convert string to char array -> char[] ch=word.toCharArray();
+
+#4. For substring purpose we use -> str.substring(start, end);
+
+#5. IMP -> type conversion one data type to compatible data type
+	int -> double
+	double -> long	(Many More)
+
+#6. import statement -> ( Static import statement) 
+	Syntax 1 -> import package1[.package2].(*);
+		1. package1: Top-level package
+		2. package2: Subordinate-level package under package1
+		3. *: To import all the classes
+	Syntax 2 -> import package1[.package2].(myClass);
+		1. myClass: Import only myClass 
+
+#7. Arrays.toString() -> simplest way to print the array as a string -> Arrays.toString(array_name);
+
+#8. 1. Collections.sort(array_name) -> Using sort() method of Collections class to sort the elements 
+      2. Collections.sort(array_name, Collections.reverseOrder()) -> reverse order sorting (descending order)
+The reverseOrder() method of Collections class that in itself is present inside java.util package returns a comparator and using this comparator we can order the Collection in reverse order (this will work fine with ‘Array of Objects’ such as the Integer array but will not work with a primitive array such as the int array)
+
+#9. Java String -> String objects are stored in a special memory area known as string constant pool.
+	i. string store in string constant pool -> String s = "GeeksforGeeks";
+	ii.  string that is not store in string constant pool ->  String s1 = new String("GeeksforGeeks");
+	** String internedString = str.intern();  -> // this will add the string to string constant pool.
+	iii. String Methods -> length(), charAt(int), substring(int, int), concat(str, str), indexOf(str), indexOf(str, int), lastIndexOf(str)
+boolean equals(str), equalsIgnoreCase (String anotherString), compareTo(str), compareToIgnoreCase(str), toLowerCase(str), toUpperCase(str), trim(str), replace(char, char)
+	iv. StringBuffer Class ->  The string represents fixed-length, immutable character sequences while StringBuffer represents growable and writable character sequences
+		Eg -> StringBuffer str = new StringBuffer();
+	v. StringBuilder Class -> Similar to StringBuffer, the StringBuilder in Java represents a mutable sequence of characters.
+		Eg -> StringBuilder str = new StringBuilder();
+	** Note -> to convert StringBuffer to StringBuilder and vice versa -> same for vice versa
+		StringBuilder sbr = new StringBuilder("Geeks");
+        		String str = sbr.toString()
+        		StringBuffer sbl = new StringBuffer(str);
+	** Note => stringbuffer is thread safe (access control to multiple threads) -> sync method
+		stringbuilder is not thread safe  -> async method
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
